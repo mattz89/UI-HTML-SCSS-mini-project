@@ -3,14 +3,6 @@
 <span (click)="getCharacters(1)">Search</span>
 
 <table *ngIf="characterCall">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Species</th>
-        <th>Status</th>
-        <th>Gender</th>
-    </tr>
-    </thead>
     <tbody *ngIf="characterCall.results">
         <tr *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
             <td>{{c.name}}</td>
