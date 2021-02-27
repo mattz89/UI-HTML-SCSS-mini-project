@@ -49,8 +49,8 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        height: 4rem;
         align-items: center;
+        height: 4rem;
         font-family: $font;
         font-weight: $regular;
         line-height: 1.8rem;
@@ -76,6 +76,7 @@
     &__data {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 35.7rem;
         font-size: 1.4rem;
     }
@@ -103,5 +104,12 @@
         line-height: 1.8rem;
         font-size: 1.4rem;
         color: #FFFFFF;
+    }
+
+    &__page {
+        &:hover {
+            cursor: pointer;
+            color: $accent;
+        }
     }
 }

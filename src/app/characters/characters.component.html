@@ -20,7 +20,7 @@
 
     <div class="characters__pages">
         <ng-container *ngIf="pages">
-            <span *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)">{{p}}</span>
+            <span class="characters__page" *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)">{{p}}</span>
         </ng-container>
     </div>
 </div>
