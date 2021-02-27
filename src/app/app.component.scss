@@ -1,0 +1,43 @@
+@import "~src/variables";
+
+.app {
+    
+    &__title {
+        margin-top: 0;
+        width: 100vw;
+        height: 26rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../assets/images/logo.svg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-color: #FFFFFF;
+        font-family: $font;
+        font-weight: $bold;
+        font-size: 6.4rem;
+        line-height: 3.2rem;
+        color: #292D34;
+    }
+
+    &__nav {
+        margin-top: 5.6rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        font-family: $font;
+        font-weight: $regular;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        color: #ABAEB0;
+        margin-right: 2.25rem;
+        margin-left: 2.25rem;
+    
+        &_is-active {
+            color: #FFFFFF;
+        }
+    }
+
+}

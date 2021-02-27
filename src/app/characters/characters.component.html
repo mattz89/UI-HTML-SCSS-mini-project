@@ -1,19 +1,26 @@
-<input name="name-search" placeholder="Search By Name" type="text" autocomplete="off" [(ngModel)]="searchTerm" />
+<div class="characters">
 
-<span (click)="getCharacters(1)">Search</span>
+    <div class="characters__search">
+        <input class="characters__input" name="name-search" placeholder="Search By Name" type="text" autocomplete="off" [(ngModel)]="searchTerm" />
+        <span class="characters__button" (click)="getCharacters(1)">Search</span>
+    </div>
+    
+    <table class="characters__table" *ngIf="characterCall">
+        <tbody *ngIf="characterCall.results">
+            <tr class="characters__row" *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
+                <td class="characters__name">{{c.name}}</td>
+                <div class="characters__data">
+                    <td class="characters__species">{{c.species}}</td>
+                    <td class="characters__status">{{c.status}}</td>
+                    <td class="characters__gender">{{c.gender}}</td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
 
-<table *ngIf="characterCall">
-    <tbody *ngIf="characterCall.results">
-        <tr *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
-            <td>{{c.name}}</td>
-            <td>{{c.species}}</td>
-            <td>{{c.status}}</td>
-            <td>{{c.gender}}</td>
-        </tr>
-    </tbody>
-</table>
-
-
-<ng-container *ngIf="pages">
-    <span *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)">{{p}}</span>
-</ng-container>
+    <div class="characters__pages">
+        <ng-container *ngIf="pages">
+            <span *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)">{{p}}</span>
+        </ng-container>
+    </div>
+</div>

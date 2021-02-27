@@ -42,7 +42,7 @@ export class CharactersComponent implements OnInit {
   fillInPageArray(total: number): void {
     this.pages = [] as number[];
 
-    for (let counter = 1; counter <= total; counter++) {
+    for (let counter = 1; counter <= 6; counter++) {
       this.pages.push(counter);
     }
   }

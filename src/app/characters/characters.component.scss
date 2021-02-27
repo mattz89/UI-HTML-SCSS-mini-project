@@ -1,0 +1,107 @@
+@import "~src/variables";
+
+.characters {
+
+    width: 100.4rem;
+    margin: auto;
+    margin-top: 7.8rem;
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        width: 76.8rem;
+        height: 4.3rem;
+        border-radius: .6rem;
+        padding-left: 1.7rem;
+        font-family: $font;
+        font-weight: $regular;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        color: #7C828D;
+        outline: none;
+        border: none;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 21.2rem;
+        height: 4.3rem;
+        border-radius: .6rem;
+        background-color: $accent;
+        font-family: $font;
+        font-weight: $regular;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        color: #FFFFFF;
+    }
+
+    &__table {
+        width: 100%;
+        margin-top: 4.1rem;
+        border-collapse: collapse;
+    }
+    
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        height: 4rem;
+        align-items: center;
+        font-family: $font;
+        font-weight: $regular;
+        line-height: 1.8rem;
+        color: #FFFFFF;
+        border-radius: .3rem;
+        background-color: #2B343B;
+        border: .1rem solid #384047;
+        box-shadow: 0rem .1rem .3rem rgba(0, 0, 0, 0.11);
+        padding-right: 4.5rem;
+        
+        &:hover {
+            cursor: pointer;
+            color: $accent;
+            background-color: #384047;
+        }
+    }
+
+    &__name{
+        margin-left: 1.697rem;
+        font-size: 1.6rem;
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        width: 35.7rem;
+        font-size: 1.4rem;
+    }
+
+    &__species {
+        width: 9.8rem;
+    }
+
+    &__status {
+        width: 6.8rem;
+    }
+
+    &__gender {
+        width: 6.4rem;
+    }
+
+    &__pages {
+        width: 15.4rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3.2rem;
+        font-family: $font;
+        font-weight: $regular;
+        line-height: 1.8rem;
+        font-size: 1.4rem;
+        color: #FFFFFF;
+    }
+}

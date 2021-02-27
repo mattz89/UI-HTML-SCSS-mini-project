@@ -1,7 +1,10 @@
-<h1>The Rick and Morty</h1>
+<div class="app">
+    <h1 class="app__title">The Rick and Morty</h1>
 
-<a routerLink="/characters" [queryParams]="{ fromPage : characterPage, nameSearch : characterNameSearch }" class="nav-link">Characters</a>
+    <div class="app__nav">
+        <a routerLink="/characters" routerLinkActive="app__link_is-active" [queryParams]="{ fromPage : characterPage, nameSearch : characterNameSearch }"  class="app__link">Characters</a>
+        <a routerLink="/episodes" routerLinkActive="app__link_is-active" class="app__link">Episode Guide</a>
+    </div>
+    <router-outlet></router-outlet>
 
-<a routerLink="/episodes" class="nav-link">Episode Guide</a>
-
-<router-outlet></router-outlet>
+</div>
