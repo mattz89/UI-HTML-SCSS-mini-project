@@ -2,7 +2,7 @@
     <h1 class="app__title">The Rick and Morty</h1>
 
     <div class="app__nav">
-        <a routerLink="/characters" routerLinkActive="app__link_is-active" [queryParams]="{ fromPage : characterPage, nameSearch : characterNameSearch }"  class="app__link">Characters</a>
+        <a routerLink="/characters" routerLinkActive="app__link_is-active" [queryParams]="{ fromPage : characterPage, nameSearch : characterNameSearch }" queryParamsHandling='preserve' class="app__link">Characters</a>
         <a routerLink="/episodes" routerLinkActive="app__link_is-active" class="app__link">Episode Guide</a>
     </div>
     <router-outlet></router-outlet>
