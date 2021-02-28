@@ -7,7 +7,7 @@
     
     <table class="characters__table" *ngIf="characterCall">
         <tbody *ngIf="characterCall.results">
-            <tr class="characters__row" *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
+            <tr class="characters__row" *ngFor="let c of characterCall.results" [routerLink]="['/characters', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
                 <td class="characters__name">{{c.name}}</td>
                 <td class="characters__species">{{c.species}}</td>
                 <td class="characters__status">{{c.status}}</td>
