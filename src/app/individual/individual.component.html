@@ -1,13 +1,9 @@
-<div class="container individual text-center" *ngIf="character">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <img [src]="character.image" alt="{{character.name}}" id="character-portrait" class="card-img-top" />
-                <div class="card-body">
-                    <div class="card-title">{{character.name}}</div>
-                    <div class="card-subtitle">{{character.gender}} {{character.species}}</div>
-                </div>
-            </div>
-        </div>
+<div class="individual" *ngIf="character">
+    <img class="individual__portrait" [src]="character.image" alt="{{character.name}}" id="character-portrait" />
+    <div class="individual__name">{{character.name}}</div>
+    <div class="individual__data">
+        <div class="individual__species">{{character.species}}</div>
+        <div class="individual__status">{{character.status}}</div>
+        <div class="individual__gender">{{character.gender}}</div>
     </div>
 </div>

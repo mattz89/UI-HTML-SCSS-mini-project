@@ -1,0 +1,69 @@
+@import "~src/variables";
+
+.episodes {
+
+    width: 100.4rem;
+    margin: auto;
+    margin-top: 7.1rem;
+    margin-bottom: 97.2rem;
+
+    &__table {
+        width: 100%;
+        margin-top: 4.1rem;
+        border-collapse: collapse;
+    }
+    
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        font-family: $font;
+        font-weight: $regular;
+        line-height: 1.8rem;
+        color: #FFFFFF;
+        border-radius: .3rem;
+        background-color: #2B343B;
+        border: .1rem solid #384047;
+        box-shadow: 0rem .1rem .3rem rgba(0, 0, 0, 0.11);
+        
+        &:hover {
+            cursor: pointer;
+            color: $accent;
+            background-color: #384047;
+        }
+    }
+
+    &__name{
+        margin-left: 1.697rem;
+        font-size: 1.6rem;
+    }
+
+    &__number {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 6.4rem;
+        font-size: 1.4rem;
+    }
+
+    &__pages {
+        width: 15.4rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3.2rem;
+        font-family: $font;
+        font-weight: $regular;
+        line-height: 1.8rem;
+        font-size: 1.4rem;
+        color: #FFFFFF;
+    }
+
+    &__page {
+        &:hover {
+            cursor: pointer;
+            color: $accent;
+        }
+    }
+}
