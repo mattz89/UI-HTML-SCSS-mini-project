@@ -9,11 +9,9 @@
         <tbody *ngIf="characterCall.results">
             <tr class="characters__row" *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
                 <td class="characters__name">{{c.name}}</td>
-                <div class="characters__data">
-                    <td class="characters__species">{{c.species}}</td>
-                    <td class="characters__status">{{c.status}}</td>
-                    <td class="characters__gender">{{c.gender}}</td>
-                </div>
+                <td class="characters__species">{{c.species}}</td>
+                <td class="characters__status">{{c.status}}</td>
+                <td class="characters__gender">{{c.gender}}</td>
             </tr>
         </tbody>
     </table>
